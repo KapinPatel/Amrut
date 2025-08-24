@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amrut Manufacturing - Semarible Motors & Pumps | Industrial Solutions</title>
+    <meta name="description" content="Leading manufacturer of Semarible Motors and Pumps. Quality industrial solutions, installation, maintenance, and custom engineering services.">
+    <meta name="keywords" content="motors, pumps, manufacturing, industrial, semarible, installation, maintenance">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, #1e40af 0%, #3b82f6 50%, #60a5fa 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #3b82f6;
+        }
+        .admin-panel {
+            display: none;
+        }
+        .language-selector {
+            cursor: pointer;
+        }
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919876543210" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto px-4">
+            <!-- Top Bar -->
+            <div class="flex justify-between items-center py-2 text-sm border-b">
+                <div class="flex items-center space-x-4">
+                    <span><i class="fas fa-phone text-blue-600"></i> +91 98765 43210</span>
+                    <span><i class="fas fa-envelope text-blue-600"></i> info@amrutmfg.com</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="language-selector flex items-center space-x-2">
+                        <i class="fas fa-globe text-blue-600"></i>
+                        <select id="languageSelect" class="bg-transparent border-none text-sm">
+                            <option value="en">English</option>
+                            <option value="hi">हिंदी</option>
+                            <option value="mr">मराठी</option>
+                        </select>
+                    </div>
+                    <button onclick="toggleAdminPanel()" class="text-blue-600 hover:text-blue-800">
+                        <i class="fas fa-user-cog"></i> Admin
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Navigation -->
+            <nav class="flex justify-between items-center py-4">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+                        <i class="fas fa-cog text-white text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-800">AMRUT</h1>
+                        <p class="text-sm text-gray-600">Manufacturing Excellence</p>
+                    </div>
+                </div>
+
+                <div class="hidden lg:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-gray-700 hover:text-blue-600">Home</a>
+                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600">About Us</a>
+                    <div class="relative group">
+                        <a href="#products" class="nav-link text-gray-700 hover:text-blue-600 flex items-center">
+                            Products <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="absolute top-full left-0 bg-white shadow-lg rounded-lg py-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="#motors" class="block px-4 py-2 hover:bg-blue-50">Motors</a>
+                            <a href="#pumps" class="block px-4 py-2 hover:bg-blue-50">Pumps</a>
+                            <a href="#spare-parts" class="block px-4 py-2 hover:bg-blue-50">Spare Parts</a>
+                        </div>
+                    </div>
+                    <div class="relative group">
+                        <a href="#services" class="nav-link text-gray-700 hover:text-blue-600 flex items-center">
+                            Services <i class="fas fa-chevron-down ml-1 text-xs"></i>
+                        </a>
+                        <div class="absolute top-full left-0 bg-white shadow-lg rounded-lg py-2 w-48 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300">
+                            <a href="#installation" class="block px-4 py-2 hover:bg-blue-50">Installation</a>
+                            <a href="#maintenance" class="block px-4 py-2 hover:bg-blue-50">Maintenance</a>
+                            <a href="#custom-solutions" class="block px-4 py-2 hover:bg-blue-50">Custom Solutions</a>
+                        </div>
+                    </div>
+                    <a href="#quality" class="nav-link text-gray-700 hover:text-blue-600">Quality</a>
+                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600">Contact</a>
+                </div>
+
+                <button id="mobileMenuBtn" class="lg:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </nav>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden bg-white border-t hidden">
+            <div class="container mx-auto px-4 py-4 space-y-2">
+                <a href="#home" class="block py-2 text-gray-700">Home</a>
+                <a href="#about" class="block py-2 text-gray-700">About Us</a>
+                <a href="#products" class="block py-2 text-gray-700">Products</a>
+                <a href="#services" class="block py-2 text-gray-700">Services</a>
+                <a href="#quality" class="block py-2 text-gray-700">Quality</a>
+                <a href="#contact" class="block py-2 text-gray-700">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Admin Panel -->
+    <div id="adminPanel" class="admin-panel fixed inset-0 bg-black bg-opacity-50 z-50">
+        <div class="bg-white w-full max-w-4xl mx-auto mt-10 rounded-lg shadow-xl">
+            <div class="flex justify-between items-center p-6 border-b">
+                <h2 class="text-2xl font-bold">Admin Dashboard</h2>
+                <button onclick="toggleAdminPanel()" class="text-gray-500 hover:text-gray-700">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+                    <div class="bg-blue-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-blue-800">Total Products</h3>
+                        <p class="text-2xl font-bold text-blue-600" id="totalProducts">24</p>
+                    </div>
+                    <div class="bg-green-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-green-800">Active Inquiries</h3>
+                        <p class="text-2xl font-bold text-green-600" id="activeInquiries">12</p>
+                    </div>
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h3 class="font-semibold text-purple-800">Downloads</h3>
+                        <p class="text-2xl font-bold text-purple-600" id="totalDownloads">156</p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <h3 class="font-semibold mb-3">Add New Product</h3>
+                        <form id="addProductForm" class="space-y-3">
+                            <input type="text" placeholder="Product Name" class="w-full p-2 border rounded">
+                            <select class="w-full p-2 border rounded">
+                                <option>Motors</option>
+                                <option>Pumps</option>
+                                <option>Spare Parts</option>
+                            </select>
+                            <textarea placeholder="Description" class="w-full p-2 border rounded h-20"></textarea>
+                            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">Add Product</button>
+                        </form>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold mb-3">Recent Inquiries</h3>
+                        <div class="space-y-2 max-h-48 overflow-y-auto">
+                            <div class="p-3 bg-gray-50 rounded">
+                                <p class="font-medium">John Doe</p>
+                                <p class="text-sm text-gray-600">Inquiry about 5HP Motor</p>
+                                <p class="text-xs text-gray-500">2 hours ago</p>
+                            </div>
+                            <div class="p-3 bg-gray-50 rounded">
+                                <p class="font-medium">ABC Industries</p>
+                                <p class="text-sm text-gray-600">Bulk order for pumps</p>
+                                <p class="text-xs text-gray-500">5 hours ago</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient text-white py-20">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Leading Manufacturer of <span class="text-yellow-300">Semarible Motors</span> & Pumps
+                    </h1>
+                    <p class="text-xl mb-8 opacity-90">
+                        Delivering industrial excellence with cutting-edge motor and pump solutions. Quality, reliability, and innovation since 1995.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button onclick="showSection('products')" class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            View Products
+                        </button>
+                        <button onclick="showSection('contact')" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors">
+                            Get Quote
+                        </button>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-white bg-opacity-10 rounded-2xl p-8 backdrop-blur-sm">
+                        <i class="fas fa-cogs text-8xl mb-4 text-yellow-300"></i>
+                        <h3 class="text-2xl font-bold mb-2">25+ Years</h3>
+                        <p class="opacity-90">Manufacturing Excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">About Amrut Manufacturing</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Established in 1995, we are a leading manufacturer specializing in high-quality Semarible Motors and Pumps for industrial applications.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Our Story</h3>
+                    <p class="text-gray-600 mb-6">
+                        Founded with a vision to provide reliable industrial solutions, Amrut Manufacturing has grown to become a trusted name in the motor and pump industry. Our commitment to quality and innovation has earned us recognition across various industrial sectors.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">500+</div>
+                            <p class="text-gray-600">Happy Clients</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600 mb-2">1000+</div>
+                            <p class="text-gray-600">Projects Completed</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-blue-50 rounded-2xl p-8">
+                    <h4 class="text-xl font-bold text-gray-800 mb-4">Our Mission</h4>
+                    <p class="text-gray-600 mb-6">
+                        To deliver world-class motor and pump solutions that exceed customer expectations while maintaining the highest standards of quality and reliability.
+                    </p>
+                    <div class="space-y-3">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>ISO 9001:2015 Certified</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>25+ Years Experience</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                            <span>Pan-India Service Network</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Products</h2>
+                <p class="text-xl text-gray-600">Comprehensive range of motors, pumps, and spare parts</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-bolt text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800">Semarible Motors</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 mb-6">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Single Phase Motors</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Three Phase Motors</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Variable Speed Motors</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Custom Specifications</li>
+                    </ul>
+                    <button onclick="showProductDetails('motors')" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        View Details
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-tint text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800">Industrial Pumps</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 mb-6">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Centrifugal Pumps</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Submersible Pumps</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Monoblock Pumps</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Pressure Boosters</li>
+                    </ul>
+                    <button onclick="showProductDetails('pumps')" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        View Details
+                    </button>
+                </div>
+
+                <div class="bg-white rounded-xl shadow-lg p-8 card-hover">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-cog text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-800">Spare Parts</h3>
+                    </div>
+                    <ul class="space-y-2 text-gray-600 mb-6">
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Motor Components</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Pump Impellers</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Seals & Gaskets</li>
+                        <li><i class="fas fa-check text-green-500 mr-2"></i>Bearings & Shafts</li>
+                    </ul>
+                    <button onclick="showProductDetails('spare-parts')" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        View Details
+                    </button>
+                </div>
+            </div>
+
+            <!-- Product Details Modal -->
+            <div id="productModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50">
+                <div class="bg-white w-full max-w-4xl mx-auto mt-10 rounded-lg shadow-xl">
+                    <div class="flex justify-between items-center p-6 border-b">
+                        <h3 id="modalTitle" class="text-2xl font-bold"></h3>
+                        <button onclick="closeProductModal()" class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-times text-xl"></i>
+                        </button>
+                    </div>
+                    <div id="modalContent" class="p-6">
+                        <!-- Content will be populated by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600">Complete solutions from installation to maintenance</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-blue-50 rounded-xl p-8 card-hover">
+                    <i class="fas fa-tools text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Installation Services</h3>
+                    <p class="text-gray-600 mb-4">Professional installation by certified technicians with warranty coverage.</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Site survey and planning</li>
+                        <li>• Professional installation</li>
+                        <li>• Testing and commissioning</li>
+                        <li>• Training and documentation</li>
+                    </ul>
+                </div>
+
+                <div class="bg-green-50 rounded-xl p-8 card-hover">
+                    <i class="fas fa-wrench text-3xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Maintenance & Repair</h3>
+                    <p class="text-gray-600 mb-4">Comprehensive maintenance programs to ensure optimal performance.</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Preventive maintenance</li>
+                        <li>• Emergency repairs</li>
+                        <li>• Performance optimization</li>
+                        <li>• Spare parts supply</li>
+                    </ul>
+                </div>
+
+                <div class="bg-purple-50 rounded-xl p-8 card-hover">
+                    <i class="fas fa-lightbulb text-3xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">Custom Solutions</h3>
+                    <p class="text-gray-600 mb-4">Tailored engineering solutions for specific industrial requirements.</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Custom design and engineering</li>
+                        <li>• Prototype development</li>
+                        <li>• System integration</li>
+                        <li>• Technical consultation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quality & Certifications -->
+    <section id="quality" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Quality & Certifications</h2>
+                <p class="text-xl text-gray-600">Committed to excellence in every product we manufacture</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Quality Assurance</h3>
+                    <p class="text-gray-600 mb-6">
+                        Our quality management system ensures that every product meets international standards and customer expectations. We follow rigorous testing procedures and maintain strict quality controls throughout the manufacturing process.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-certificate text-blue-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">ISO 9001:2015 Certified</h4>
+                                <p class="text-sm text-gray-600">Quality Management System</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-leaf text-green-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">ISO 14001:2015</h4>
+                                <p class="text-sm text-gray-600">Environmental Management</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mr-4">
+                                <i class="fas fa-shield-alt text-red-600"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold">BIS Certification</h4>
+                                <p class="text-sm text-gray-600">Bureau of Indian Standards</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg">
+                    <h4 class="text-xl font-bold text-gray-800 mb-6">Testing Facilities</h4>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="text-center p-4 bg-blue-50 rounded-lg">
+                            <i class="fas fa-microscope text-2xl text-blue-600 mb-2"></i>
+                            <p class="font-semibold">Material Testing</p>
+                        </div>
+                        <div class="text-center p-4 bg-green-50 rounded-lg">
+                            <i class="fas fa-tachometer-alt text-2xl text-green-600 mb-2"></i>
+                            <p class="font-semibold">Performance Testing</p>
+                        </div>
+                        <div class="text-center p-4 bg-purple-50 rounded-lg">
+                            <i class="fas fa-thermometer-half text-2xl text-purple-600 mb-2"></i>
+                            <p class="font-semibold">Environmental Testing</p>
+                        </div>
+                        <div class="text-center p-4 bg-orange-50 rounded-lg">
+                            <i class="fas fa-check-double text-2xl text-orange-600 mb-2"></i>
+                            <p class="font-semibold">Quality Control</p>
+                        </div>
+                    </div>
+                    <button onclick="downloadBrochure('quality')" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                        Download Quality Certificate
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Management & Team -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Management & Team</h2>
+                <p class="text-xl text-gray-600">Meet the leaders driving our success</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-32 h-32 bg-blue-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-4xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Rajesh Sharma</h3>
+                    <p class="text-blue-600 font-semibold mb-2">Managing Director</p>
+                    <p class="text-gray-600 text-sm">25+ years in manufacturing industry with expertise in motor and pump technology.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-32 h-32 bg-green-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-4xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Priya Patel</h3>
+                    <p class="text-green-600 font-semibold mb-2">Technical Director</p>
+                    <p class="text-gray-600 text-sm">Engineering excellence with focus on innovation and quality assurance.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-32 h-32 bg-purple-100 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <i class="fas fa-user text-4xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">Amit Kumar</h3>
+                    <p class="text-purple-600 font-semibold mb-2">Sales Director</p>
+                    <p class="text-gray-600 text-sm">Building strong customer relationships and expanding market presence nationwide.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients & Testimonials -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Clients & Testimonials</h2>
+                <p class="text-xl text-gray-600">Trusted by leading industries across India</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8">Our Valued Clients</h3>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow text-center">
+                            <i class="fas fa-industry text-3xl text-blue-600 mb-3"></i>
+                            <p class="font-semibold">Tata Steel</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow text-center">
+                            <i class="fas fa-building text-3xl text-green-600 mb-3"></i>
+                            <p class="font-semibold">Reliance Industries</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow text-center">
+                            <i class="fas fa-oil-can text-3xl text-orange-600 mb-3"></i>
+                            <p class="font-semibold">ONGC</p>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow text-center">
+                            <i class="fas fa-bolt text-3xl text-yellow-600 mb-3"></i>
+                            <p class="font-semibold">NTPC</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-8">What Our Clients Say</h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-user text-blue-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Suresh Gupta</p>
+                                    <p class="text-sm text-gray-600">Plant Manager, ABC Industries</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 italic">"Excellent quality motors with reliable performance. Amrut's after-sales service is outstanding."</p>
+                            <div class="flex text-yellow-400 mt-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-white p-6 rounded-lg shadow">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                                    <i class="fas fa-user text-green-600"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold">Meera Singh</p>
+                                    <p class="text-sm text-gray-600">Technical Head, XYZ Corp</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 italic">"Their custom solutions perfectly matched our requirements. Professional team and timely delivery."</p>
+                            <div class="flex text-yellow-400 mt-2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News & Updates -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">News & Updates</h2>
+                <p class="text-xl text-gray-600">Stay updated with our latest developments</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <article class="bg-gray-50 rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 bg-blue-100 flex items-center justify-center">
+                        <i class="fas fa-newspaper text-4xl text-blue-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-blue-600 mb-2">March 15, 2024</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">New Energy Efficient Motor Series Launch</h3>
+                        <p class="text-gray-600 mb-4">Introducing our latest range of energy-efficient motors with 20% improved performance...</p>
+                        <button class="text-blue-600 font-semibold hover:text-blue-800">Read More →</button>
+                    </div>
+                </article>
+
+                <article class="bg-gray-50 rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 bg-green-100 flex items-center justify-center">
+                        <i class="fas fa-award text-4xl text-green-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-green-600 mb-2">March 10, 2024</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Excellence Award for Quality Manufacturing</h3>
+                        <p class="text-gray-600 mb-4">Amrut Manufacturing receives recognition for outstanding quality standards...</p>
+                        <button class="text-green-600 font-semibold hover:text-green-800">Read More →</button>
+                    </div>
+                </article>
+
+                <article class="bg-gray-50 rounded-xl overflow-hidden card-hover">
+                    <div class="h-48 bg-purple-100 flex items-center justify-center">
+                        <i class="fas fa-handshake text-4xl text-purple-600"></i>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-sm text-purple-600 mb-2">March 5, 2024</p>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Strategic Partnership with Global Supplier</h3>
+                        <p class="text-gray-600 mb-4">New partnership to enhance our supply chain and expand product offerings...</p>
+                        <button class="text-purple-600 font-semibold hover:text-purple-800">Read More →</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Center -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Download Center</h2>
+                <p class="text-xl text-gray-600">Access brochures, manuals, and technical documents</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow card-hover">
+                    <i class="fas fa-file-pdf text-3xl text-red-600 mb-4"></i>
+                    <h3 class="font-bold text-gray-800 mb-2">Product Catalog</h3>
+                    <p class="text-sm text-gray-600 mb-4">Complete product range with specifications</p>
+                    <button onclick="downloadBrochure('catalog')" class="w-full bg-red-600 text-white py-2 rounded hover:bg-red-700 transition-colors">
+                        Download PDF
+                    </button>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow card-hover">
+                    <i class="fas fa-book text-3xl text-blue-600 mb-4"></i>
+                    <h3 class="font-bold text-gray-800 mb-2">Installation Manual</h3>
+                    <p class="text-sm text-gray-600 mb-4">Step-by-step installation guidelines</p>
+                    <button onclick="downloadBrochure('manual')" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition-colors">
+                        Download PDF
+                    </button>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow card-hover">
+                    <i class="fas fa-certificate text-3xl text-green-600 mb-4"></i>
+                    <h3 class="font-bold text-gray-800 mb-2">Certificates</h3>
+                    <p class="text-sm text-gray-600 mb-4">Quality and compliance certificates</p>
+                    <button onclick="downloadBrochure('certificates')" class="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transition-colors">
+                        Download PDF
+                    </button>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow card-hover">
+                    <i class="fas fa-wrench text-3xl text-purple-600 mb-4"></i>
+                    <h3 class="font-bold text-gray-800 mb-2">Service Manual</h3>
+                    <p class="text-sm text-gray-600 mb-4">Maintenance and troubleshooting guide</p>
+                    <button onclick="downloadBrochure('service')" class="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700 transition-colors">
+                        Download PDF
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-800 mb-4">Contact Us</h2>
+                <p class="text-xl text-gray-600">Get in touch for inquiries and support</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Get In Touch</h3>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-blue-600 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Address</h4>
+                                <p class="text-gray-600">123 Industrial Area, Sector 15<br>Pune, Maharashtra 411001</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-phone text-blue-600 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Phone</h4>
+                                <p class="text-gray-600">+91 98765 43210<br>+91 87654 32109</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-envelope text-blue-600 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Email</h4>
+                                <p class="text-gray-600">info@amrutmfg.com<br>sales@amrutmfg.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-clock text-blue-600 text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold text-gray-800">Business Hours</h4>
+                                <p class="text-gray-600">Mon - Sat: 9:00 AM - 6:00 PM<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 p-8 rounded-xl">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Send Inquiry</h3>
+                    <form id="contactForm" class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
+                            <input type="email" placeholder="Email Address" required class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="tel" placeholder="Phone Number" class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
+                            <select class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none">
+                                <option>Select Product Interest</option>
+                                <option>Semarible Motors</option>
+                                <option>Industrial Pumps</option>
+                                <option>Spare Parts</option>
+                                <option>Custom Solutions</option>
+                            </select>
+                        </div>
+                        <textarea placeholder="Your Message" rows="4" required class="w-full p-3 border border-gray-300 rounded-lg focus:border-blue-500 focus:outline-none"></textarea>
+                        <button type="submit" class="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
+                            Send Inquiry
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-cog text-white"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold">AMRUT</h3>
+                            <p class="text-sm text-gray-400">Manufacturing Excellence</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 mb-4">Leading manufacturer of Semarible Motors and Pumps with 25+ years of industry experience.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Products</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Semarible Motors</a></li>
+                        <li><a href="#" class="hover:text-white">Industrial Pumps</a></li>
+                        <li><a href="#" class="hover:text-white">Spare Parts</a></li>
+                        <li><a href="#" class="hover:text-white">Custom Solutions</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#" class="hover:text-white">Installation</a></li>
+                        <li><a href="#" class="hover:text-white">Maintenance</a></li>
+                        <li><a href="#" class="hover:text-white">Repair Services</a></li>
+                        <li><a href="#" class="hover:text-white">Technical Support</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#about" class="hover:text-white">About Us</a></li>
+                        <li><a href="#quality" class="hover:text-white">Quality</a></li>
+                        <li><a href="#contact" class="hover:text-white">Contact</a></li>
+                        <li><a href="#" class="hover:text-white">Download Center</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">&copy; 2024 Amrut Manufacturing. All rights reserved. | Privacy Policy | Terms of Service</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Language selector
+        document.getElementById('languageSelect').addEventListener('change', function() {
+            const selectedLang = this.value;
+            // In a real implementation, this would change the page language
+            console.log('Language changed to:', selectedLang);
+            alert('Language feature will be implemented with backend integration');
+        });
+
+        // Admin panel toggle
+        function toggleAdminPanel() {
+            const adminPanel = document.getElementById('adminPanel');
+            adminPanel.classList.toggle('admin-panel');
+        }
+
+        // Product details modal
+        function showProductDetails(productType) {
+            const modal = document.getElementById('productModal');
+            const title = document.getElementById('modalTitle');
+            const content = document.getElementById('modalContent');
+            
+            const productData = {
+                'motors': {
+                    title: 'Semarible Motors',
+                    content: `
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3">Motor Specifications</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li>• Power Range: 0.5 HP to 500 HP</li>
+                                    <li>• Voltage: 220V to 11KV</li>
+                                    <li>• Frequency: 50Hz / 60Hz</li>
+                                    <li>• Efficiency: IE3 / IE4 Standards</li>
+                                    <li>• Protection: IP55 / IP56</li>
+                                    <li>• Insulation Class: F / H</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3">Applications</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li>• Industrial Machinery</li>
+                                    <li>• Conveyor Systems</li>
+                                    <li>• Pumping Applications</li>
+                                    <li>• Textile Industry</li>
+                                    <li>• Food Processing</li>
+                                    <li>• Chemical Plants</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex gap-4">
+                            <button onclick="downloadBrochure('motors')" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Download Brochure</button>
+                            <button onclick="requestQuote('motors')" class="border border-blue-600 text-blue-600 px-6 py-2 rounded hover:bg-blue-50">Request Quote</button>
+                        </div>
+                    `
+                },
+                'pumps': {
+                    title: 'Industrial Pumps',
+                    content: `
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3">Pump Specifications</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li>• Flow Rate: 10 LPM to 10,000 LPM</li>
+                                    <li>• Head: 5m to 500m</li>
+                                    <li>• Suction: 25mm to 300mm</li>
+                                    <li>• Delivery: 25mm to 250mm</li>
+                                    <li>• Material: Cast Iron / SS316</li>
+                                    <li>• Temperature: -10°C to 120°C</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3">Pump Types</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li>• Centrifugal Pumps</li>
+                                    <li>• Submersible Pumps</li>
+                                    <li>• Monoblock Pumps</li>
+                                    <li>• Self Priming Pumps</li>
+                                    <li>• Vertical Turbine Pumps</li>
+                                    <li>• Chemical Process Pumps</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex gap-4">
+                            <button onclick="downloadBrochure('pumps')" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Download Brochure</button>
+                            <button onclick="requestQuote('pumps')" class="border border-blue-600 text-blue-600 px-6 py-2 rounded hover:bg-blue-50">Request Quote</button>
+                        </div>
+                    `
+                },
+                'spare-parts': {
+                    title: 'Spare Parts',
+                    content: `
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3">Motor Spare Parts</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li>• Stator Windings</li>
+                                    <li>• Rotor Assemblies</li>
+                                    <li>• Bearings & Seals</li>
+                                    <li>• Terminal Boxes</li>
+                                    <li>• Cooling Fans</li>
+                                    <li>• Junction Boxes</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold mb-3">Pump Spare Parts</h4>
+                                <ul class="space-y-2 text-gray-600">
+                                    <li>• Impellers</li>
+                                    <li>• Volute Casings</li>
+                                    <li>• Mechanical Seals</li>
+                                    <li>• Wear Rings</li>
+                                    <li>• Shaft Sleeves</li>
+                                    <li>• Gasket Sets</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-6 flex gap-4">
+                            <button onclick="downloadBrochure('spare-parts')" class="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700">Download Catalog</button>
+                            <button onclick="requestQuote('spare-parts')" class="border border-blue-600 text-blue-600 px-6 py-2 rounded hover:bg-blue-50">Request Quote</button>
+                        </div>
+                    `
+                }
+            };
+            
+            title.textContent = productData[productType].title;
+            content.innerHTML = productData[productType].content;
+            modal.classList.remove('hidden');
+        }
+
+        function closeProductModal() {
+            document.getElementById('productModal').classList.add('hidden');
+        }
+
+        // Download brochure function
+        function downloadBrochure(type) {
+            // Simulate file download
+            const fileName = `${type}-brochure.pdf`;
+            alert(`Downloading ${fileName}...`);
+            
+            // Update download counter in admin panel
+            const currentDownloads = parseInt(document.getElementById('totalDownloads').textContent);
+            document.getElementById('totalDownloads').textContent = currentDownloads + 1;
+        }
+
+        // Request quote function
+        function requestQuote(productType) {
+            const message = `Hi, I'm interested in ${productType}. Please send me a detailed quote.`;
+            const whatsappUrl = `https://wa.me/919876543210?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            alert('Thank you for your inquiry! We will contact you within 24 hours.');
+            
+            // Update inquiry counter in admin panel
+            const currentInquiries = parseInt(document.getElementById('activeInquiries').textContent);
+            document.getElementById('activeInquiries').textContent = currentInquiries + 1;
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Add product form submission
+        document.getElementById('addProductForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            alert('Product added successfully!');
+            
+            // Update product counter
+            const currentProducts = parseInt(document.getElementById('totalProducts').textContent);
+            document.getElementById('totalProducts').textContent = currentProducts + 1;
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Show section function
+        function showSection(sectionId) {
+            const target = document.getElementById(sectionId);
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('productModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeProductModal();
+            }
+        });
+
+        document.getElementById('adminPanel').addEventListener('click', function(e) {
+            if (e.target === this) {
+                toggleAdminPanel();
+            }
+        });
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Amrut Manufacturing website loaded successfully');
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97408d82c6690330',t:'MTc1NjAxNDQyMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
